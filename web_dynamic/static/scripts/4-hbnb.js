@@ -61,5 +61,20 @@ $(document).ready(function() {
 	},
 	 dataType="json"
 	);
-	
+
+	// task5 - 4-hbnb
+	$('.filters button').click(function () { 
+		const amenitiesList = Object.values(amenities);
+		$.post({
+			url: "http://localhost:5001/api/v1/places_search/",
+			data: JSON.stringify({"amenities": amenitiesList}),
+			headers: { "content-type": "application/json"}
+		}, function (data) {
+			console.log(data)
+			$("section.places").append(renderPlaces(data));
+		}
+		),
+		 dataType="json";
+		
+	});
 });
