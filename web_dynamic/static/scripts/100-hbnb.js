@@ -61,19 +61,19 @@ $(document).ready(function () {
   }
   );
   // task5 - 4-hbnb
-  $('.filters button').click(function () {
-    const amenitiesList = Object.keys(amenities);
-    console.log(amenitiesList);
-    $.post({
-      url: 'http://localhost:5001/api/v1/places_search/',
-      data: JSON.stringify({ amenities: amenitiesList }),
-      headers: { 'content-type': 'application/json' },
-      dataType: 'json'
-    }, function (data) {
-      console.log(data);
-      $('section.places').html(renderPlaces(data));
-    });
-  });
+  // $('.filters button').click(function () {
+  //   const amenitiesList = Object.keys(amenities);
+  //   console.log(amenitiesList);
+  //   $.post({
+  //     url: 'http://localhost:5001/api/v1/places_search/',
+  //     data: JSON.stringify({ amenities: amenitiesList }),
+  //     headers: { 'content-type': 'application/json' },
+  //     dataType: 'json'
+  //   }, function (data) {
+  //     console.log(data);
+  //     $('section.places').html(renderPlaces(data));
+  //   });
+  // });
   // task100 - 100-hbnb
   const states = {};
   $('.locations input:checkbox').each(function () {
