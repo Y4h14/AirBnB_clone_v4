@@ -64,7 +64,8 @@ $(document).ready(function() {
 
 	// task5 - 4-hbnb
 	$('.filters button').click(function () { 
-		const amenitiesList = Object.values(amenities);
+		const amenitiesList = Object.keys(amenities);
+		console.log(amenitiesList)
 		$.post({
 			url: "http://localhost:5001/api/v1/places_search/",
 			data: JSON.stringify({"amenities": amenitiesList}),
